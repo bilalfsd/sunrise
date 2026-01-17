@@ -1,0 +1,859 @@
+<!DOCTYPE html><!-- Handled by Exflow.site --><html data-wf-page="68d17b55669acb852e623145" data-wf-site="68d17b52669acb852e6230b0" data-wf-status="1" lang="en-US"><head><meta charset="utf-8"/><title>Sunrise-kahari-house</title><meta content="Sunrise-kahari house" name="description"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="Webflow" name="generator"/><link href="css/sunriserestaurantny.webflow.shared.0153dc491.css" rel="stylesheet" type="text/css"  /><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" /><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Bitter:400,700,400italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Bebas Neue:regular","Josefin Sans:regular,500,600,700"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="images/favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="images/app-icon.png" rel="apple-touch-icon"/><script src="https://cdn.jsdelivr.net/npm/@flowbase-co/boosters-countup@1.0.2/dist/countup.js" type="text/javascript"  ></script></head><body class="body"><div class="page_wrapper new"><section class="hero-section"><nav id="navBar" class="nav"><div class="loading"><div class="loading__css w-embed"><style>
+  .loading__spinner-wrapper {
+    animation: fade-in-fwd .8s ease both;
+  }
+  
+  .loading__spinner {
+  	animation: rotation .8s linear infinite;
+  }
+
+  @keyframes fade-in-fwd {
+    0% {
+      transform: scale(0.5);
+      filter: blur(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotation{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+</style></div><div class="loading__spinner-wrapper"><div class="loading__spinner"></div><img width="405" height="360" alt="" src="images/ohc-acorn-dark.avif" loading="eager" class="loading__image"/></div></div><div class="nav__css-embed w-embed"><style>
+	.nav {
+		/* NAV VARIABLES */
+		--underline-color: #ffffff;
+		--dropdown-underline-color: #363e4f;
+		--dropdown-arrow-color: #ffffff;
+		--nav-duration: 0.3s;
+		--toggle-icon-height: 2px;
+		--toggle-color: #ffffff;
+		--toggle-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+		--toggle-duration: 0.2s;
+	}
+  
+  .nav__container {
+  	transition: height var(--nav-duration) ease; 
+  }
+
+	.nav__bg {
+		backdrop-filter: blur(20px);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity var(--nav-duration) ease 0.1s, 
+    						transform var(--nav-duration) ease;
+	}
+
+	.nav__link:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		background-color: var(--underline-color);
+		visibility: hidden;
+		transform: scaleX(0);
+		transition: all var(--nav-duration) ease;
+	}
+
+	.nav__link:hover:before {
+		visibility: visible;
+		transform: scaleX(1);
+	}
+
+	.nav__toggle:hover .nav__toggle-icon:before {
+		left: 50%;
+	}
+
+	.nav__toggle:hover .nav__toggle-icon:after {
+		left: 0px;
+	}
+
+	.nav__toggle-icon {
+		display: block;
+		position: relative;
+		width: 24px;
+		height: 11px;
+	}
+
+	.nav__toggle-icon:before,
+	.nav__toggle-icon:after {
+		content: '';
+		position: absolute;
+		height: var(--toggle-icon-height);
+		border-radius: 2px;
+		background-color: var(--toggle-color);
+		transition: left var(--toggle-duration) var(--toggle-timing-function),
+			transform var(--toggle-duration) var(--toggle-timing-function);
+	}
+
+	.nav__toggle-icon:before {
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.nav__toggle-icon:after {
+		bottom: 0;
+		left: 50%;
+		right: 0;
+	}
+
+	.nav__toggle.nav__toggle--active .nav__toggle-icon {
+		height: var(--toggle-icon-height);
+	}
+
+	.nav__toggle.nav__toggle--active .nav__toggle-icon:before {
+		top: 0;
+		left: 0;
+		right: 0;
+		transform: rotatez(45deg);
+	}
+
+	.nav__toggle.nav__toggle--active .nav__toggle-icon:after {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transform: rotatez(-45deg);
+	}
+
+	@media screen and (min-width: 992px) {
+    .nav--compress .nav__container {
+      height: 4rem;
+    }
+
+    .nav--compress .nav__bg {
+      opacity: 1;
+       transform: translateY(0);
+    }
+  
+		.nav__dropdown:before {
+			content: "";
+			position: absolute;
+			top: -7px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 0;
+			height: 0;
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid var(--dropdown-arrow-color);
+		}
+
+		.nav__link--dropdown:before {
+			background-color: var(--dropdown-underline-color);
+		}
+
+		.nav__dropdown {
+			pointer-events: none;
+			opacity: 0;
+			transform: translate3D(-50%, -10px, 0);
+			transition: opacity var(--nav-duration) ease, 
+      						transform var(--nav-duration) ease;
+		}
+
+		.nav__svg-embed {
+			transition: transform var(--nav-duration) ease;
+		}
+
+		.nav__link-group:hover .nav__dropdown {
+			pointer-events: unset;
+			opacity: 1;
+			transform: translate3D(-50%, 0, 0);
+		}
+
+		.nav__link-group:hover .nav__svg-embed {
+			transform: translateY(2px);
+		}
+	}
+
+	.menu-open {
+		overflow: hidden;
+		height: 100vh;
+	}
+
+	@media screen and (max-width: 991px) {
+  	.nav__bg {
+    	transform: translateY(0);
+    }
+  
+		.nav__bg,
+		.nav__mobile-title,
+		.nav__link-wrapper {
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity var(--nav-duration) ease,
+									transform var(--nav-duration) ease;
+		}
+
+		.nav__link-wrapper {
+			transform: translateY(1rem);
+		}
+
+		body.menu-open .nav__bg,
+		body.menu-open .nav__mobile-title,
+		body.menu-open .nav__link-wrapper {
+			opacity: 1;
+			pointer-events: unset;
+		}
+
+		body.menu-open .nav__link-wrapper {
+			transform: translateY(0);
+		}
+
+		body.menu-open .nav__container {
+			height: 100vh;
+			overflow-y: auto;
+		}
+	}
+  
+  @media screen and (min-width: 992px) {
+    .w-editor-body .nav__link-group .nav__dropdown {
+      pointer-events: unset !important;
+      opacity: 1 !important;
+      transform: translate3D(-50%, 0, 0) !important;
+      z-index: 1;
+    }
+    .w-editor-body .nav__link-group .nav__dropdown:hover {
+    	z-index: 2;
+    }
+  }
+  
+  [class*="line-clamp"] {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+
+  .line-clamp-1 {
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+  }
+
+  .line-clamp-4 {
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+  }
+
+  .line-clamp-5 {
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
+  }
+
+  .line-clamp-6 {
+    line-clamp: 6;
+    -webkit-line-clamp: 6;
+  }
+</style></div><div class="nav__container"><div class="nav__bg"></div><div class="nav__link-wrapper nav__link-wrapper--left"><h4 class="nav__mobile-title">Menu</h4><div class="nav__link-group"><a href="/" aria-current="page" class="nav__link w--current">Home</a></div><div class="nav__link-group"><a href="/about" rel="noopener" class="nav__link">about</a></div><div class="nav__link-group"><a href="#menu1" class="nav__link">Our menu</a></div><div class="nav__link-group menu"><div class="nav__link nav__link--parent"><div class="nav__link-text">our menus</div><div class="nav__svg-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div><div class="nav__dropdown"><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Dine in</a><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Take Out/delivery</a><a href="#" class="nav__link nav__link--dropdown">Party trays</a><a href="#" class="nav__link nav__link--dropdown">Catering menu</a></div></div><div class="nav__link-group"></div></div><a href="/" aria-current="page" class="nav__brand w-inline-block w--current"><img width="382" height="286" alt="LOGO" src="images/untitled-20design-20-1-.png" loading="eager" srcset="images/untitled-20design-20-1-p-500.png 500w, images/untitled-20design-20-1-p-800.png 800w, images/untitled-20design-20-1-p-1080.png 1080w, images/untitled-20design-20-1-.png 1600w" sizes="(max-width: 479px) 100vw, 381.9905700683594px" class="nav__logo"/></a><div class="nav__link-wrapper nav__link-wrapper--right"><div class="nav__link-group catering"><div class="nav__link nav__link--parent"><div class="nav__link-text">Events &amp; catering</div><div class="nav__svg-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div><div class="nav__dropdown"><a href="#" rel="noopener" class="nav__link nav__link--dropdown">kitty party</a><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Birthdary party</a><a href="#" class="nav__link nav__link--dropdown">corporate events</a><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Birthdary party</a><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Birthdary party</a><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Birthdary party</a></div></div><div class="nav__link-group"><a href="/contact-us" rel="noopener" class="nav__link">contact us</a></div></div><a id="navToggleBtn12" href="#" class="nav__toggle w-inline-block"><div id="navToggleBtnIcon4" class="nav__toggle-icon"></div></a></div><div class="nav__js-embed w-embed w-script"><script>
+	// Nav bar scroll animation
+	const navBar = document.getElementById('navBar');
+
+	const animationObserver = new IntersectionObserver((entries, observer) => {
+		for (const entry of entries) {
+			entry.target.classList.toggle('nav--compress', !entry.isIntersecting)
+		}
+	});
+
+	animationObserver.observe(navBar);
+	
+	// Mobile menu hamburger toggle
+	const navToggleBtn = document.getElementById('navToggleBtn');
+	const body = document.body;
+	const html = document.documentElement;
+	
+	navToggleBtn.addEventListener('mousedown', function(e){
+		navToggleBtn.classList.toggle('nav__toggle--active');
+		body.classList.toggle('menu-open');
+		html.classList.toggle('menu-open');
+	});
+</script></div></nav></section><div data-delay="4000" data-animation="slide" class="slider-6 w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true"><div class="mask-6 w-slider-mask"><div class="slide-6 w-slide"><div class="hero-plax"><div class="kd-header-menu-background-image-wrapper"><div data-poster-url="https://cdn.prod.website-files.com/6777ca72cf24680980ebd1e0%2F677c913724b38a6a210eb313_8626668-hd_1920_1080_25fps-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68d17b55669acb852e623193_8626668-hd_1920_1080_25fps-transcode.mp4,https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68d17b55669acb852e623193_8626668-hd_1920_1080_25fps-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="kd-header-menu-background-video w-background-video w-background-video-atom"><video id="41a0c6ad-e53c-9199-8823-55ae3c7ff73f-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/6777ca72cf24680980ebd1e0%2F677c913724b38a6a210eb313_8626668-hd_1920_1080_25fps-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68d17b55669acb852e623193_8626668-hd_1920_1080_25fps-transcode.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68d17b55669acb852e623193_8626668-hd_1920_1080_25fps-transcode.webm" data-wf-ignore="true"/></video></div></div><div class="hero-plax__content"><header class="hero-plax__heading"><div class="banner-heading-wrapper"><div class="banner-heading">Experience the Taste of <span class="text-span">Tradition</span></div></div></header><div class="hero-plax__cta"><a data-w-id="41a0c6ad-e53c-9199-8823-55ae3c7ff749" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div></div><div data-w-id="41a0c6ad-e53c-9199-8823-55ae3c7ff750" class="slide-7 w-slide"><div class="hero-plax"><div class="div-block-31"><img src="images/group-82.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" sizes="(max-width: 1919px) 100vw, 1919.9716796875px" alt="" srcset="images/group-82-p-500.jpg 500w, images/group-82-p-800.jpg 800w, images/group-82-p-1080.jpg 1080w, images/group-82-p-1600.jpg 1600w, images/group-82.jpg 1920w" class="hero-plax__img--base-layer"/></div><div class="hero-plax__content"><header class="hero-plax__heading"><div class="banner-heading-wrapper"><div class="banner-heading">Experience the Taste of <span class="text-span">Tradition</span></div></div></header><div class="hero-plax__cta"><a data-w-id="41a0c6ad-e53c-9199-8823-55ae3c7ff75d" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div></div></div><div class="w-slider-arrow-left"><div class="w-icon-slider-left"></div></div><div class="w-slider-arrow-right"><div class="w-icon-slider-right"></div></div><div class="slide-nav-5 w-slider-nav w-round"></div></div><section class="our-story-section"><div class="w-layout-blockcontainer container w-container"><div class="section-wrapper"><div class="section-headline"><div class="section-title"><strong class="bold-text-7">OUR STORY</strong></div><div class="text-block-4">A Legacy of <span class="text-span">Authentic Flavors</span></div></div><div class="w-layout-grid our-story-grid"><div class="our-story-left"><img src="images/flags.png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9953002929688px, 939.9906005859375px" srcset="images/flags-p-500.png 500w, images/flags-p-800.png 800w, images/flags.png 1024w" alt="" class="image-7"/></div><div class="our-stroy-right"><div class="section-text">At Sunrise, we celebrate the rich and diverse culinary traditions of South Asia, bringing authentic flavors from Pakistan, India, and Bengal right to your table. Our menu is a vibrant journey—from the bold, aromatic spices of Pakistani street-style snacks to the regal, slow-cooked Mughlai dishes fit for royalty. We also honor the delicate and soulful flavors of Bengali cuisine, known for its fragrant rice dishes, freshwater fish specialties, and subtle use of mustard and mustard oil. Each plate at Sunrise is crafted with passion and respect for centuries-old recipes passed down through generations. We invite you to experience the true essence of South Asian heritage in every bite—where every dish tells a story of culture, tradition, and love.</div><div class="count-up-card-wrapper"><div class="count-up-card"><img src="images/tabler-users.svg" loading="lazy" alt="" class="count-up-card-icon"/><div class="counter_wrapper"><div fb-count-delay="800" fb-count="true" fb-count-target="35" fb-count-time="3000" class="count-up-number">35 </div><div class="text-block-5">+</div></div><div class="count-up-title">Years Experience</div></div><div class="count-up-card"><img src="images/tabler-users.svg" loading="lazy" alt="" class="count-up-card-icon"/><div class="counter_wrapper"><div fb-count-delay="800" fb-count="true" fb-count-target="50" fb-count-time="3000" class="count-up-number">50</div><div class="text-block-5">+</div></div><div class="count-up-title">Repeat Customers</div></div><div class="count-up-card"><img src="images/tabler-users.svg" loading="lazy" alt="" class="count-up-card-icon"/><div class="counter_wrapper"><div fb-count-delay="800" fb-count="true" fb-count-target="200" fb-count-time="3000" class="count-up-number">200</div><div class="text-block-5">+</div></div><div class="count-up-title">Menu Items</div></div><div class="count-up-card"><img src="images/tabler-users.svg" loading="lazy" alt="" class="count-up-card-icon"/><div class="counter_wrapper"><div fb-count-delay="800" fb-count="true" fb-count-target="100" fb-count-time="3000" class="count-up-number">100</div><div class="text-block-5">%</div></div><div class="count-up-title">Love &amp; Care</div></div></div></div></div></div></div></section><section id="events" class="events-and-catering-section"><div class="w-layout-blockcontainer container w-container"><div class="section-wrapper"><div class="section-headline"><div class="section-title"><strong class="bold-text-6">EVENTS &amp; CATERING</strong></div><div class="text-block-4">Nationwide <span class="text-span">Catering Services</span></div><div class="catering-subtext">From intimate gatherings to grand celebrations, we cater to all your special occasions with excellence</div></div><div class="section-image-wrapper"><div class="text-content-block"><div class="catering-text-up">Elevate Your Events</div><div class="catering-text-down">Professional catering services that transform your celebrations into extraordinary experiences</div></div></div><div class="card-wrapper"><div data-w-id="a65131b6-f986-65e0-8b32-1361979715ad" class="card_base"><div class="icon_wrap"><img width="38" src="images/ink-drop.svg" alt="" class="icon"/></div><div class="card_title_wrap"><h1 class="h1_features">Wedding Events<br/></h1><div class="text_features">Make your special day unforgettable with our exquisite catering</div></div><div class="hero-plax__cta"><a href="#" rel="noopener" class="btn btn--light-outline w-button">Read more</a></div></div><div data-w-id="3fd25e9d-f87c-5a20-208b-c31b614b63d3" class="card_base"><div class="icon_wrap"><img width="38" src="images/ink-drop.svg" alt="" class="icon"/></div><div class="card_title_wrap"><h1 class="h1_features">Corporate Events<br/></h1><div class="text_features">Impress your clients and colleagues with professional catering</div></div><div class="hero-plax__cta"><a href="#" rel="noopener" class="btn btn--light-outline w-button">Read more</a></div></div><div><div data-w-id="a5544d07-0028-9532-4438-663bde4c2cd3" class="card_base"><div class="icon_wrap"><img width="38" src="images/ink-drop.svg" alt="" class="icon"/></div><div class="card_title_wrap"><h1 class="h1_features">Birthday Parties<br/></h1><div class="text_features">Celebrate life&#x27;s milestones with delicious food and service</div></div><div class="hero-plax__cta"><a href="#" rel="noopener" class="btn btn--light-outline w-button">Read more</a></div></div></div><div data-w-id="2c12ff4a-ec8f-8092-60ed-e6a0486d7b43" class="card_base"><div class="icon_wrap"><img width="38" src="images/ink-drop.svg" alt="" class="icon"/></div><div class="card_title_wrap"><h1 class="h1_features">Holiday Parties<br/></h1><div class="text_features">Festive catering that brings joy to your celebrations</div></div><div class="hero-plax__cta"><a href="#" rel="noopener" class="btn btn--light-outline w-button">Read more</a></div></div><div data-w-id="3c0b1063-2cea-2c30-085b-19a3e45f0886" class="card_base"><div class="icon_wrap"><img width="38" src="images/ink-drop.svg" alt="" class="icon"/></div><div class="card_title_wrap"><h1 class="h1_features">Kitty Parties<br/></h1><div class="text_features">Perfect menu options for intimate gatherings with friends</div></div><div></div><div class="hero-plax__cta"><a href="#" rel="noopener" class="btn btn--light-outline w-button">Read more</a></div></div><div data-w-id="76f96d88-83ea-c5b4-3c18-4cdd64d9b8ce" class="card_base"><div class="icon_wrap"><img width="38" src="images/ink-drop.svg" alt="" class="icon"/></div><div class="card_title_wrap"><h1 class="h1_features">Sweet Sixteen<br/></h1><div class="text_features">Create memorable teenage celebrations with trendy cuisine</div></div><div class="hero-plax__cta"><a href="#" rel="noopener" class="btn btn--light-outline w-button">Read more</a></div></div></div></div></div></section><section class="gallary-section"><div class="w-layout-blockcontainer container w-container"><div class="section-wrapper"><div class="section-headline"><div class="section-title"><strong>OUR Gallery</strong></div></div><div class="container-2"><div class="w-embed"><style>
+  .w-editor-body .img-grid__img:hover {
+    transform: none !important;
+  }
+</style></div><div class="img-grid"><a href="#" id="w-node-_23ca7e42-109d-507f-c2d5-06b32b12d3bf-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/catering-20pic-207-p-500.webp 500w, images/catering-20pic-207-p-800.webp 800w, images/catering-20pic-207.webp 959w" alt="" src="images/catering-20pic-207.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0215.jpg",
+      "fileName": "DSCF0215.jpg",
+      "fileSize": 392844,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f43673384a4e1fc0198ed_DSCF0215.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_23ca7e42-109d-507f-c2d5-06b32b12d3c1-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/catering-20pic-2010-p-500.webp 500w, images/catering-20pic-2010-p-800.webp 800w, images/catering-20pic-2010-p-1080.webp 1080w, images/catering-20pic-2010.webp 1360w" alt="" src="images/catering-20pic-2010.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0283.jpg",
+      "fileName": "DSCF0283.jpg",
+      "fileSize": 286408,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f4369b3c7981b2cd0b3b0_DSCF0283.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_23ca7e42-109d-507f-c2d5-06b32b12d3c3-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 765px" srcset="images/catering-20pic-206-p-500.webp 500w, images/catering-20pic-206.webp 765w" alt="" src="images/catering-20pic-206.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0307.jpg",
+      "fileName": "DSCF0307.jpg",
+      "fileSize": 308526,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f43695470d2684816f2fc_DSCF0307.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_23ca7e42-109d-507f-c2d5-06b32b12d3c5-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 765px" srcset="images/food-20pic-2011-p-500.webp 500w, images/food-20pic-2011.webp 765w" alt="" src="images/food-20pic-2011.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0231.jpg",
+      "fileName": "DSCF0231.jpg",
+      "fileSize": 422056,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f436751b8b2099ea991a6_DSCF0231.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_23ca7e42-109d-507f-c2d5-06b32b12d3c7-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 765px" srcset="images/food-20pic-206-p-500.webp 500w, images/food-20pic-206.webp 765w" alt="" src="images/food-20pic-206.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0259.jpg",
+      "fileName": "DSCF0259.jpg",
+      "fileSize": 77193,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f436800c1664685e3ce95_DSCF0259.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_23ca7e42-109d-507f-c2d5-06b32b12d3c9-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 765px" srcset="images/food-20pic-2019-p-500.webp 500w, images/food-20pic-2019.webp 765w" alt="" src="images/food-20pic-2019.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0197.jpg",
+      "fileName": "DSCF0197.jpg",
+      "fileSize": 148964,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f4366248561386e99188c_DSCF0197.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_23ca7e42-109d-507f-c2d5-06b32b12d3cb-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/food-20pic-2016-p-500.webp 500w, images/food-20pic-2016-p-800.webp 800w, images/food-20pic-2016-p-1080.webp 1080w, images/food-20pic-2016.webp 1354w" alt="" src="images/food-20pic-2016.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0295.jpg",
+      "fileName": "DSCF0295.jpg",
+      "fileSize": 258437,
+      "height": 1138,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f436998493d2d97752371_DSCF0295.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a></div><div class="button-wrap"><a href="#" class="show-more-btn w-inline-block"><div>Show more</div></a></div></div></div></div></section></div><div class="page_wrapper-new"><nav id="navBar" class="nav"><div class="loading"><div class="loading__css w-embed"><style>
+  .loading__spinner-wrapper {
+    animation: fade-in-fwd .8s ease both;
+  }
+  
+  .loading__spinner {
+  	animation: rotation .8s linear infinite;
+  }
+
+  @keyframes fade-in-fwd {
+    0% {
+      transform: scale(0.5);
+      filter: blur(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotation{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+</style></div><div class="loading__spinner-wrapper"><div class="loading__spinner"></div><img width="405" height="360" alt="" src="images/ohc-acorn-dark.avif" loading="eager" class="loading__image"/></div></div><div class="nav__css-embed w-embed"><style>
+	.nav {
+		/* NAV VARIABLES */
+		--underline-color: #ffffff;
+		--dropdown-underline-color: #363e4f;
+		--dropdown-arrow-color: #ffffff;
+		--nav-duration: 0.3s;
+		--toggle-icon-height: 2px;
+		--toggle-color: #ffffff;
+		--toggle-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+		--toggle-duration: 0.2s;
+	}
+  
+  .nav__container {
+  	transition: height var(--nav-duration) ease; 
+  }
+
+	.nav__bg {
+		backdrop-filter: blur(20px);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity var(--nav-duration) ease 0.1s, 
+    						transform var(--nav-duration) ease;
+	}
+
+	.nav__link:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		background-color: var(--underline-color);
+		visibility: hidden;
+		transform: scaleX(0);
+		transition: all var(--nav-duration) ease;
+	}
+
+	.nav__link:hover:before {
+		visibility: visible;
+		transform: scaleX(1);
+	}
+
+	.nav__toggle:hover .nav__toggle-icon:before {
+		left: 50%;
+	}
+
+	.nav__toggle:hover .nav__toggle-icon:after {
+		left: 0px;
+	}
+
+	.nav__toggle-icon {
+		display: block;
+		position: relative;
+		width: 24px;
+		height: 11px;
+	}
+
+	.nav__toggle-icon:before,
+	.nav__toggle-icon:after {
+		content: '';
+		position: absolute;
+		height: var(--toggle-icon-height);
+		border-radius: 2px;
+		background-color: var(--toggle-color);
+		transition: left var(--toggle-duration) var(--toggle-timing-function),
+			transform var(--toggle-duration) var(--toggle-timing-function);
+	}
+
+	.nav__toggle-icon:before {
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.nav__toggle-icon:after {
+		bottom: 0;
+		left: 50%;
+		right: 0;
+	}
+
+	.nav__toggle.nav__toggle--active .nav__toggle-icon {
+		height: var(--toggle-icon-height);
+	}
+
+	.nav__toggle.nav__toggle--active .nav__toggle-icon:before {
+		top: 0;
+		left: 0;
+		right: 0;
+		transform: rotatez(45deg);
+	}
+
+	.nav__toggle.nav__toggle--active .nav__toggle-icon:after {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transform: rotatez(-45deg);
+	}
+
+	@media screen and (min-width: 992px) {
+    .nav--compress .nav__container {
+      height: 4rem;
+    }
+
+    .nav--compress .nav__bg {
+      opacity: 1;
+       transform: translateY(0);
+    }
+  
+		.nav__dropdown:before {
+			content: "";
+			position: absolute;
+			top: -7px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 0;
+			height: 0;
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid var(--dropdown-arrow-color);
+		}
+
+		.nav__link--dropdown:before {
+			background-color: var(--dropdown-underline-color);
+		}
+
+		.nav__dropdown {
+			pointer-events: none;
+			opacity: 0;
+			transform: translate3D(-50%, -10px, 0);
+			transition: opacity var(--nav-duration) ease, 
+      						transform var(--nav-duration) ease;
+		}
+
+		.nav__svg-embed {
+			transition: transform var(--nav-duration) ease;
+		}
+
+		.nav__link-group:hover .nav__dropdown {
+			pointer-events: unset;
+			opacity: 1;
+			transform: translate3D(-50%, 0, 0);
+		}
+
+		.nav__link-group:hover .nav__svg-embed {
+			transform: translateY(2px);
+		}
+	}
+
+	.menu-open {
+		overflow: hidden;
+		height: 100vh;
+	}
+
+	@media screen and (max-width: 991px) {
+  	.nav__bg {
+    	transform: translateY(0);
+    }
+  
+		.nav__bg,
+		.nav__mobile-title,
+		.nav__link-wrapper {
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity var(--nav-duration) ease,
+									transform var(--nav-duration) ease;
+		}
+
+		.nav__link-wrapper {
+			transform: translateY(1rem);
+		}
+
+		body.menu-open .nav__bg,
+		body.menu-open .nav__mobile-title,
+		body.menu-open .nav__link-wrapper {
+			opacity: 1;
+			pointer-events: unset;
+		}
+
+		body.menu-open .nav__link-wrapper {
+			transform: translateY(0);
+		}
+
+		body.menu-open .nav__container {
+			height: 100vh;
+			overflow-y: auto;
+		}
+	}
+  
+  @media screen and (min-width: 992px) {
+    .w-editor-body .nav__link-group .nav__dropdown {
+      pointer-events: unset !important;
+      opacity: 1 !important;
+      transform: translate3D(-50%, 0, 0) !important;
+      z-index: 1;
+    }
+    .w-editor-body .nav__link-group .nav__dropdown:hover {
+    	z-index: 2;
+    }
+  }
+  
+  [class*="line-clamp"] {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+
+  .line-clamp-1 {
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+  }
+
+  .line-clamp-4 {
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+  }
+
+  .line-clamp-5 {
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
+  }
+
+  .line-clamp-6 {
+    line-clamp: 6;
+    -webkit-line-clamp: 6;
+  }
+</style></div><div class="nav__container"><div class="nav__bg"></div><div class="nav__link-wrapper nav__link-wrapper--left"><h4 class="nav__mobile-title">Menu</h4><div class="nav__link-group"><a href="/" aria-current="page" class="nav__link w--current">Home</a></div><div class="nav__link-group"><a href="/about" rel="noopener" class="nav__link">about</a></div><div class="nav__link-group"><a href="#menu1" class="nav__link">Our menu</a></div><div class="nav__link-group menu"><div class="nav__link nav__link--parent"><div class="nav__link-text">our menus</div><div class="nav__svg-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div><div class="nav__dropdown"><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Dine in</a><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Take Out/delivery</a><a href="#" class="nav__link nav__link--dropdown">Party trays</a><a href="#" class="nav__link nav__link--dropdown">Catering menu</a></div></div><div class="nav__link-group"></div></div><a href="/" aria-current="page" class="nav__brand w-inline-block w--current"><img width="382" height="286" alt="LOGO" src="images/untitled-20design-20-1-.png" loading="eager" srcset="images/untitled-20design-20-1-p-500.png 500w, images/untitled-20design-20-1-p-800.png 800w, images/untitled-20design-20-1-p-1080.png 1080w, images/untitled-20design-20-1-.png 1600w" sizes="(max-width: 479px) 100vw, 381.9905700683594px" class="nav__logo"/></a><div class="nav__link-wrapper nav__link-wrapper--right"><div class="nav__link-group catering"><div class="nav__link nav__link--parent"><div class="nav__link-text">Events &amp; catering</div><div class="nav__svg-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div><div class="nav__dropdown"><a href="#" rel="noopener" class="nav__link nav__link--dropdown">kitty party</a><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Birthdary party</a><a href="#" class="nav__link nav__link--dropdown">corporate events</a><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Birthdary party</a><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Birthdary party</a><a href="#" rel="noopener" class="nav__link nav__link--dropdown">Birthdary party</a></div></div><div class="nav__link-group"><a href="/contact-us" rel="noopener" class="nav__link">contact us</a></div></div><a id="navToggleBtn12" href="#" class="nav__toggle w-inline-block"><div id="navToggleBtnIcon4" class="nav__toggle-icon"></div></a></div><div class="nav__js-embed w-embed w-script"><script>
+	// Nav bar scroll animation
+	const navBar = document.getElementById('navBar');
+
+	const animationObserver = new IntersectionObserver((entries, observer) => {
+		for (const entry of entries) {
+			entry.target.classList.toggle('nav--compress', !entry.isIntersecting)
+		}
+	});
+
+	animationObserver.observe(navBar);
+	
+	// Mobile menu hamburger toggle
+	const navToggleBtn = document.getElementById('navToggleBtn');
+	const body = document.body;
+	const html = document.documentElement;
+	
+	navToggleBtn.addEventListener('mousedown', function(e){
+		navToggleBtn.classList.toggle('nav__toggle--active');
+		body.classList.toggle('menu-open');
+		html.classList.toggle('menu-open');
+	});
+</script></div></nav><section class="hero-section"><div data-delay="4000" data-animation="slide" class="slider-6 w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true"><div class="mask-6 w-slider-mask"><div class="slide-6 w-slide"><div class="hero-plax"><div class="kd-header-menu-background-image-wrapper"><div data-poster-url="https://cdn.prod.website-files.com/6777ca72cf24680980ebd1e0%2F677c913724b38a6a210eb313_8626668-hd_1920_1080_25fps-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68d17b55669acb852e623193_8626668-hd_1920_1080_25fps-transcode.mp4,https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68d17b55669acb852e623193_8626668-hd_1920_1080_25fps-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="kd-header-menu-background-video w-background-video w-background-video-atom"><video id="609ef88e-e8c0-02ac-14cb-f69668c1c712-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/6777ca72cf24680980ebd1e0%2F677c913724b38a6a210eb313_8626668-hd_1920_1080_25fps-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68d17b55669acb852e623193_8626668-hd_1920_1080_25fps-transcode.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68d17b55669acb852e623193_8626668-hd_1920_1080_25fps-transcode.webm" data-wf-ignore="true"/></video></div></div><div class="hero-plax__content"><header class="hero-plax__heading"><div class="banner-heading-wrapper"><div class="banner-heading">Experience the Taste of <span class="text-span">Tradition</span></div></div></header></div></div></div><div data-w-id="609ef88e-e8c0-02ac-14cb-f69668c1c723" class="slide-7 w-slide"><div class="hero-plax"><div class="div-block-31"><img src="images/group-82.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" sizes="(max-width: 1919px) 100vw, 1919.9716796875px" alt="" srcset="images/group-82-p-500.jpg 500w, images/group-82-p-800.jpg 800w, images/group-82-p-1080.jpg 1080w, images/group-82-p-1600.jpg 1600w, images/group-82.jpg 1920w" class="hero-plax__img--base-layer"/></div><div class="hero-plax__content"><header class="hero-plax__heading"><div class="banner-heading-wrapper"><div class="banner-heading">Experience the Taste of <span class="text-span">Tradition</span></div></div></header><div class="hero-plax__cta"><a data-w-id="9c6ca985-3418-a74c-a162-d9829b49efdf" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div class="btn-txt">Make a Resarvation</div><div class="btn-txt">Make a Resarvation</div></div><div class="btn-bg c-13"></div></a></div></div></div></div></div><div class="w-slider-arrow-left"><div class="w-icon-slider-left"></div></div><div class="w-slider-arrow-right"><div class="w-icon-slider-right"></div></div><div class="slide-nav-5 w-slider-nav w-round"></div></div></section><div class="about-us-section"><div class="w-layout-blockcontainer container_new w-container"><div class="section_wrapper"><div class="w-layout-grid grid-7"><div class="image-block"><img src="images/whatsapp-20image-202025-09-24-20at-2015.15.36_c4c2802b.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/whatsapp-20image-202025-09-24-20at-2015.15.36_c4c2802b-p-500.jpg 500w, images/whatsapp-20image-202025-09-24-20at-2015.15.36_c4c2802b-p-800.jpg 800w, images/whatsapp-20image-202025-09-24-20at-2015.15.36_c4c2802b-p-1080.jpg 1080w, images/whatsapp-20image-202025-09-24-20at-2015.15.36_c4c2802b.jpg 1290w" alt="" class="about-img"/></div><div id="w-node-e1f7772f-a8c4-a1a1-bd67-8039936a6517-2e623145" class="about-text-content"><div class="about-content-block"><div class="about-heading">About us</div><div class="about-description-block"><div class="about-description">Our restaurant is a family-owned and operated establishment with over <strong>35 years of experience</strong> in the food industry, serving South Asian communities nationwide. We specialize in serving the local community with delicious Halal food, including Pakistani Halal Cuisine &amp; Zabiha Halal Food.</div><div class="text-block-24">Our experienced culinary team is committed to using only the freshest and highest-quality ingredients in all our recipes, ensuring that each dish is bursting with flavor.</div><div><a data-w-id="6dc0cf02-d4a6-e3bb-a5bc-c0f879434bf9" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div></div><div class="image-block"><img src="images/whatsapp-20image-202025-09-24-20at-2013.43.09_446cc6ca.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/whatsapp-20image-202025-09-24-20at-2013.43.09_446cc6ca-p-500.jpg 500w, images/whatsapp-20image-202025-09-24-20at-2013.43.09_446cc6ca-p-800.jpg 800w, images/whatsapp-20image-202025-09-24-20at-2013.43.09_446cc6ca-p-1080.jpg 1080w, images/whatsapp-20image-202025-09-24-20at-2013.43.09_446cc6ca.jpg 1290w" alt="" class="about-img"/></div></div></div></div></div><section class="image-section"><div class="w-layout-blockcontainer container_secondary w-container"><div class="div-block-36"><div class="w-layout-hflex flex-block"><div class="second-img"><img src="images/whatsapp-20image-202025-09-24-20at-2013.43.31_f94b2ef2.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/whatsapp-20image-202025-09-24-20at-2013.43.31_f94b2ef2-p-500.jpg 500w, images/whatsapp-20image-202025-09-24-20at-2013.43.31_f94b2ef2-p-800.jpg 800w, images/whatsapp-20image-202025-09-24-20at-2013.43.31_f94b2ef2-p-1080.jpg 1080w, images/whatsapp-20image-202025-09-24-20at-2013.43.31_f94b2ef2.jpg 1290w" alt="" class="img-border"/></div><div class="first-img"><img src="images/whatsapp-20image-202025-09-24-20at-2013.43.09_09dc62b7.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/whatsapp-20image-202025-09-24-20at-2013.43.09_09dc62b7-p-500.jpg 500w, images/whatsapp-20image-202025-09-24-20at-2013.43.09_09dc62b7-p-800.jpg 800w, images/whatsapp-20image-202025-09-24-20at-2013.43.09_09dc62b7-p-1080.jpg 1080w, images/whatsapp-20image-202025-09-24-20at-2013.43.09_09dc62b7.jpg 1290w" alt="" class="img-border"/></div></div></div></div></section><section id="menu" class="our-menu-section"><div class="w-layout-blockcontainer container w-container"><div class="section-wrapper"><div class="section-headline"><div class="text-block-4">Discover Our <span class="text-span">Culinary Delights</span></div><div class="text-block-28">Our Menu</div></div><div class="menu-wrapper"><div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="w-tabs"><div class="tabs-menu w-tab-menu"><a data-w-tab="Tab 1" class="tab-link-tab-1 w-inline-block w-tab-link w--current"><div class="text-block-8">Appetizers</div></a><a data-w-tab="Tab 2" class="tab-link-tab-2-2 w-inline-block w-tab-link"><div>Chef Signature</div></a><a data-w-tab="Tab 3" class="tab-link-tab-3 w-inline-block w-tab-link"><div>Soup</div></a><a data-w-tab="Tab 4" class="tab-link-tab-4 w-inline-block w-tab-link"><div>Rice</div></a><a data-w-tab="Tab 5" class="tab-link-tab-5 w-inline-block w-tab-link"><div>Naan / Bread</div></a><a data-w-tab="Tab 6" class="tab-link-tab-6 w-inline-block w-tab-link"><div>Breakfast</div></a><a data-w-tab="Tab 7" class="tab-link-tab-7 w-inline-block w-tab-link"><div>Main Entree</div></a><a data-w-tab="Tab 8" class="tab-link-tab-8 w-inline-block w-tab-link"><div class="text-block-14">Seafood Entree</div></a><a data-w-tab="Tab 9" class="tab-link-tab-9 w-inline-block w-tab-link"><div>Chinese Wok</div></a><a data-w-tab="Tab 10" class="tab-link-tab-10 w-inline-block w-tab-link"><div>Vegetable Entree</div></a><a data-w-tab="Tab 11" class="tab-link-tab-11 w-inline-block w-tab-link"><div>Snacks/Sides</div></a><a data-w-tab="Tab 12" class="tab-link-tab-12 w-inline-block w-tab-link"><div>Tandoori Entree</div></a><a data-w-tab="Tab 13" class="tab-link-tab-13 w-inline-block w-tab-link"><div>Platter</div></a></div><div class="w-tab-content"><div data-w-tab="Tab 1" class="w-tab-pane w--tab-active"><div class="menu-items"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN KARAHI (PER LB)</div><div class="menu-price">$19.99</div></div><div class="text-block-9">Spiced minced chicken, finely chopped onions and cilantro, wrapped in an all-purpose flour dough</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">VEGETABLE SAMOSA (2PC)</div><div class="menu-price">$4.00</div></div><div class="text-block-9">Spiced minced potato and peas, finely chopped onions, and cilantro, wrapped in an all-purpose flour dough</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">DAHI BALLA (3PC)</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Fried fritters dipped in sweet yogurt, coated with homemade dressing</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">SAMOSA CHAAT</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Layered with chickpea curry, crispy samosa, chutneys, yogurt, spices, and sev</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">PANI PURI (8PC)</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Hollow, crispy-fried puffed balls filled with potato, chickpeas, onions, and flavored tamarind/mint water</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN SPRING ROLL (2PC)</div><div class="menu-price">$5.00</div></div><div class="text-block-9">Thin pastry filled with chicken, then fried</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">SHAMI KABAB (2PC)</div><div class="menu-price">$5.00</div></div><div class="text-block-9">Chicken patty coated with egg and grilled</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">PAPRI CHAAT</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Chickpeas salad with tomato, onion, potato, cilantro, and house dressing</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">FISH PAKORA (PER LB)</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Codfish coated in gram flour and traditional spices, deep fried</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN MOMO (8PC STEAM)</div><div class="menu-price">$12.00</div></div><div class="text-block-9">Minced chicken with soy, chilies, and peppers inside steamed flour dough</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">VEG MOMO (8PC STEAM)</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Steamed dumplings stuffed with seasoned vegetables</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">PANEER PAKORA (4PC)</div><div class="menu-price">$6.00</div></div><div class="text-block-9">Crispy fried cottage cheese coated with spiced batter</div></div></div></div></div><div data-w-tab="Tab 2" class="w-tab-pane"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN KARAHI (PER LB)</div><div class="menu-price">$19.99</div></div><div class="text-block-9">Classic chicken karahi cooked with fresh tomatoes, ginger, and spices — made to order (20 min wait)</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">GOAT KARAHI (PER LB)</div><div class="menu-price">$29.99</div></div><div class="text-block-9">Tender goat in traditional karahi masala, slow-cooked for rich flavor (20 min wait)</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">KEEMA KARAHI (PER LB)</div><div class="menu-price">$$24.99</div></div><div class="text-block-9">Minced meat cooked in karahi style with house spices and green chilies (20 min wait)</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">MUTTON KARAHI (PER LB)</div><div class="menu-price">$24.99</div></div><div class="text-block-9">Succulent mutton in chef-special karahi masala, cooked fresh to order (20 min wait)</div></div><div class="menu-box"><div class="title-price"><div class="menu-title">PANEER kadahi</div><div class="menu-price">$19.99</div></div><div class="text-block-9">Spiced minced chicken, finely chopped onions and cilantro, wrapped in an all-purpose flour dough</div></div></div></div><div data-w-tab="Tab 3" class="w-tab-pane"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN CORN SOUP</div><div class="menu-price">$8.00</div></div><div class="text-block-9">A comforting soup with chicken, sweet corn, and egg ribbons in a savory broth<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN HOT &amp; SOUR SOUP</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Spicy and tangy soup with chicken, vegetables, and Asian flavors<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">VEGETABLE SOUP</div><div class="menu-price">$6.00</div></div><div class="text-block-9">Light and flavorful soup with a medley of fresh vegetables<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">BASIL BROCCOLI SOUP</div><div class="menu-price">$6.00</div></div><div class="text-block-9">Smooth broccoli soup infused with fresh basil and spices</div></div></div></div><div data-w-tab="Tab 4" class="w-tab-pane"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN BIRYANI </div><div class="menu-price">$12.00</div></div><div class="text-block-9">Savory chicken and rice dish with layers of spiced chicken, basmati rice, and aromatics<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">GOAT BIRYANI</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Fragrant basmati rice layered with tender goat and traditional South Asian spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">GOAT PULAO</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Goat Yakhni (broth) rice cooked with mild spices for deep flavor<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN PULAO</div><div class="menu-price">$12.00</div></div><div class="text-block-9">Chicken Yakhni (broth) rice dish infused with whole spices and herbs<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">VEG BIRYANI</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Basmati rice cooked with assorted vegetables and aromatic spices</div></div></div></div><div data-w-tab="Tab 5" class="w-tab-pane"><div class="menu-items"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">PLAIN NAAN</div><div class="menu-price">$2.00</div></div><div class="text-block-9">Baked bread<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">SESAME NAAN</div><div class="menu-price">$3.00</div></div><div class="text-block-9">Baked bread coated with sesame seed<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">GARLIC NAAN</div><div class="menu-price">$3.00 </div></div><div class="text-block-9">Baked bread coated with garlic and cilantro<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">KEEMA NAAN</div><div class="menu-price">$5.00</div></div><div class="text-block-9">Baked bread filled with minced chicken<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">ALOO PARATHA</div><div class="menu-price">$4.00</div></div><div class="text-block-9">Baked bread filled with potato<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">TAWA PARATHA</div><div class="menu-price">$4.00</div></div><div class="text-block-9">Flat grilled bread made with butter or oil<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">ONION KULCHA</div><div class="menu-price">$3.00</div></div><div class="text-block-9">Baked bread coated with onions<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">LACHA PARATHA</div><div class="menu-price">$4.00</div><div class="menu-price">$4.00</div></div><div class="text-block-9">Baked bread coated with oil or butter<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">KEEMA PARATHA</div><div class="menu-price">$5.00</div></div><div class="text-block-9">Flat grilled bread stuffed with minced chicken<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">ROTI</div><div class="menu-price">$2.00</div></div><div class="text-block-9">Whole wheat bread<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHEESE NAAN</div><div class="menu-price">$2.00 </div></div><div class="text-block-9">Cheese stuffed naan bread<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">ASSORTED NAAN (3PC)</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Assorted variety of naan breads<br/></div></div></div></div></div><div data-w-tab="Tab 6" class="w-tab-pane"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">HALWA PURI</div><div class="menu-price">$10.00</div></div><div class="text-block-9">(2pc Puri, Suji Halwa, Chana, Aloo Tharkari)<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">OMELET</div><div class="menu-price">$5.00</div></div><div class="text-block-9">Buffet (Sat &amp; Sun only)<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">Breakfast BUFFET</div><div class="menu-price">$15.00 / PP</div></div><div class="text-block-9">Halwa, puri, channa, aloo, goat paya, chicken keema, beef nehari</div></div></div></div><div data-w-tab="Tab 7" class="w-tab-pane"><div class="menu-items"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">GOAT CURRY</div><div class="menu-price">$20.00</div></div><div class="text-block-9">Chunky pieces of baby goat slowly simmered in an aromatic blend of garlic, ginger, thyme, onion, and hot pepper<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN CURRY</div><div class="menu-price">$15.00</div></div><div class="text-block-9">Chunky pieces of chicken slowly simmered in an aromatic blend of garlic, ginger, thyme, onions, and hot pepper<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">SIGNATURE BEEF HALEEM</div><div class="menu-price">$18.00</div></div><div class="text-block-9">Savory porridge made with beef, wheat, lentils, and spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">LAHORI GOAT PAYA</div><div class="menu-price">$18.00</div></div><div class="text-block-9">Stew of goat feet<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">NIHARI</div><div class="menu-price">$18.00</div></div><div class="text-block-9">Boneless beef stew with traditional herbs and spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">BUTTER CHICKEN</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Made with boneless chicken, butter, heavy cream, and traditional herbs and spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">GOAT KORMA</div><div class="menu-price">$20.00</div></div><div class="text-block-9">Chunks of baby goat cooked with yogurt, almonds, and traditional herbs and spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">TAWA KEEMA</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Minced chicken cooked with bell peppers and traditional spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">KOFTA W/EGG</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Meatball curry with boiled eggs flavored with traditional herbs and spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN TIKKA MASALA</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Grilled chicken cooked in a creamy tomato-based sauce with spices<br/></div></div></div></div></div><div data-w-tab="Tab 8" class="w-tab-pane"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">SAFFRON SALMON</div><div class="menu-price">$22.00</div></div><div class="text-block-9">Salmon marinated with a blend of saffron, ajwain and herbs broiled in tandoor<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">TANDOORI SHRIMP (6PC)</div><div class="menu-price">$20.00</div></div><div class="text-block-9">Jumbo shrimp flavored with ajwain, ginger and garlic, barbequed over charcoal<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">THAI CHILLI SHRIMP (6PC)</div><div class="menu-price">$20.00</div></div><div class="text-block-9">Jumbo fried shrimps flavored with Thai Chilli Sauce<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">TANDOORI FISH</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Whole fish marinated and cooked in Tandoor<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">GARLIC SHRIMP (6PC)</div><div class="menu-price">$20.00</div></div><div class="text-block-9">Shrimp cooked with garlic and spices<br/></div></div></div></div><div data-w-tab="Tab 9" class="w-tab-pane"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">VEG/CHICKEN NOODLES</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Stir-fried noodles with vegetables or chicken<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN CHILLY</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Spicy and tangy chicken with chilies<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">GOBI MANCHURIAN</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Crispy fried cauliflower tossed in Manchurian sauce<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN MANCHURIAN</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Chicken pieces tossed in a spicy Manchurian sauce<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">BEEF CHILLY</div><div class="menu-price">$18.00</div></div><div class="text-block-9">Beef cooked with chilies and sauces<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">LOLLIPOP CHICKEN (3PC)</div><div class="menu-price">$12.00</div></div><div class="text-block-9">Deep-fried chicken wings coated with spicy sauce<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">SESAME CHICKEN</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Crispy chicken tossed with sesame seeds and sauce<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHILLY SHRIMP</div><div class="menu-price">$20.00</div></div><div class="text-block-9">Shrimp cooked with spicy chili sauce<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHILLY PANEER</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Cottage cheese cooked with chilies and sauces<br/></div></div></div></div><div data-w-tab="Tab 10" class="w-tab-pane"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">LAHORI CHANA</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Chickpea curry flavored by traditional herbs and spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">PALAK PANEER</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Spinach with cottage cheese flavored by traditional herbs and spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">TARKA DAL</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Lentils cooked with traditional herbs and spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">BHINDI MASALA</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Cut okra cooked with onions and flavored by traditional herbs and spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">VEGETABLE KORMA</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Vegetables cooked in yogurt or coconut with nuts and spices<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">PANEER BURJI</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Chunks of paneer cooked in savory, tangy and spiced mixture of onions, tomatoes and green chilies<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">ACHARI BAINGAN</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Baingan (eggplant) cooked with onions, tomatoes and green chilies<br/><br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">ALOO PALAK</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Potatoes and spinach cooked with different spices, herbs and cream<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">MALAI KOFTA</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Crisp fried potato paneer koftas cooked in creamy, smooth and rich curry<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">DAAL MAKHNI</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Whole black lentils and black beans cooked with onions, tomatoes, herbs and cream<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">MALAI KOFTA</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Crisp fried potato paneer koftas cooked in creamy, smooth and rich curry<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">MALAI KOFTA</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Crisp fried potato paneer koftas cooked in creamy, smooth and rich curry<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">PANEER MAKHNI</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Chunks of paneer cooked in tomatoes, cashews, spices and cream<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">SHAHI PANEER</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Chunks of paneer cooked in a creamy gravy of onions, yogurt, nuts and seeds<br/></div></div></div></div><div data-w-tab="Tab 11" class="w-tab-pane"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN TIKKA ROLL</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Marinated Chicken sliced &amp; rolled up in a Paratha<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">KABAB ROLL</div><div class="menu-price">$5.00</div></div><div class="text-block-9">Ground Meat Kabab rolled up in Naan<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">BEEF BIHARI ROLL</div><div class="menu-price">$9.00</div></div><div class="text-block-9">Boneless Beef sliced rolled up in Paratha<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">PANEER ROLL</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Marinated Cottage Cheese Rolled up in Paratha<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">ZINGER BURGER</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Chicken Breast, Onion, tomato, mayo, pickles<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHEESE BURGER</div><div class="menu-price">$10.00</div></div><div class="text-block-9">Beef Patty, tomato, onion, and mayo<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">MASALA/REGULAR/CHEESE FRIES</div><div class="menu-price">$4.00</div></div><div class="text-block-9">Fries with masala, regular, or cheese seasoning<br/>Baingan (eggplant) cooked with onions, tomatoes and green chilies<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN NUGGETS (12PC)</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Boneless breaded chicken nuggets<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">BUFFALO/BBQ WINGS (8PC)</div><div class="menu-price">$12.00</div></div><div class="text-block-9">Fried wings coated with your choice of Buffalo or BBQ sauce<br/></div></div></div></div><div data-w-tab="Tab 12" class="w-tab-pane"><div class="menu-items-box-wrapper"><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN TIKKA (8PC)</div><div class="menu-price">$12.00</div></div><div class="text-block-9">Small pieces of marinated chicken, threaded onto skewers and grilled<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">MALAI BOTI (8PC)</div><div class="menu-price">$12.00</div></div><div class="text-block-9">Small pieces of marinated chicken with cream flavor, threaded onto skewers and grilled<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">HARYALI BOTI (8PC)</div><div class="menu-price">$12.00</div></div><div class="text-block-9">Small pieces of marinated chicken with mint flavor, threaded onto skewers and grilled<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN BIHARI BOTI (8PC)</div><div class="menu-price">$12.00</div></div><div class="text-block-9">Small pieces of marinated chicken, threaded onto skewers and grilled (Spicy)<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">BEEF BIHARI BOTI</div><div class="menu-price">$18.00</div></div><div class="text-block-9">Small pieces of marinated beef, threaded onto skewers and grilled<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">MIX SHAHI PLATTER</div><div class="menu-price">$16.00</div></div><div class="text-block-9">Mix platter of any 3 boti of your choice<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHICKEN KABAB (2PC)</div><div class="menu-price">$6.00</div></div><div class="text-block-9">Marinated ground chicken, threaded onto skewers and cooked<br/>Baingan (eggplant) cooked with onions, tomatoes and green chilies<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">BEEF KABAB (2PC)</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Marinated ground beef, threaded onto skewers and cooked<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">LAMB KEBAB (2PC)</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Marinated ground lamb, threaded onto skewers and cooked<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">BABY CHOPS (5PC)</div><div class="menu-price">$24.00</div></div><div class="text-block-9">Marinated grilled lamb chops<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">PANEER TIKKA (8PC)</div><div class="menu-price">$6.00</div></div><div class="text-block-9">Marinated cottage cheese, threaded onto a skewer and grilled<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHAPLI KABAB (2PC)</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Chicken patty cooked on flat grill<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">BEEF CHAPLI KABAB (2PC)</div><div class="menu-price">$8.00</div></div><div class="text-block-9">Beef patty cooked on flat grill<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">TANDOORI LEG (2PC)</div><div class="menu-price">$14.00</div></div><div class="text-block-9">Chicken leg and thigh marinated cooked in oven<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">VEGETABLE PLATTER</div><div class="menu-price">$12.00</div></div><div class="text-block-9">Assortment of grilled vegetables<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">CHEESE KABAB (2PC)</div><div class="menu-price">$6.00</div></div><div class="text-block-9">Cheese kabab grilled on skewers<br/></div></div><div class="menu-box"><div class="title-price"><div class="menu-title">WHOLE TANDOORI CHICKEN</div><div class="menu-price">$18.00</div></div><div class="text-block-9">Whole chicken marinated and cooked in tandoor<br/></div></div></div></div><div data-w-tab="Tab 13" class="w-tab-pane"><div class="menu-items-box-wrapper"><div data-w-id="73b04754-3816-b34f-8357-23d7617774a6" style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="menu-box"><div class="title-price"><div class="menu-title">MIX GRILL PLATTER</div><div class="menu-price">$25.00</div></div><div class="text-block-9">4 pc Malai boti, 4 pc Tikka, 2 pc Chicken Kabab, 2 pc Bihari Chicken kabab &amp; 4 pc Haryali boti<br/></div></div><div data-w-id="73b04754-3816-b34f-8357-23d7617774af" style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="menu-box"><div class="title-price"><div class="menu-title">FAMILY PLATTER (Serves 3-4 People)</div><div class="menu-price">$49.99</div></div><div class="text-block-9">3 Skewers Chicken Seekh Kabab, 2 Skewers Chicken Tikka, 2 Skewers Beef Seekh Kabab, 4 pcs Tandoori Chicken Legs<br/></div></div><div data-w-id="73b04754-3816-b34f-8357-23d7617774b8" style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="menu-box"><div class="title-price"><div class="menu-title">FAMILY JUMBO PLATTER (Serves 5-6 People)</div><div class="menu-price">$74.99</div></div><div class="text-block-9">5 Skewers Chicken Seekh Kabab, 2 Chicken Tikka, 5 Beef Seekh Kabab, 5 Tandoori Chicken Legs, Beef Bihari Tikka *Family platter served over brown rice<br/></div></div></div></div></div></div></div></div></div></section><section class="party-and-reserve-section"><div class="w-layout-blockcontainer container-full w-container"><div class="w-layout-grid grid-8"><div id="w-node-e7a1629a-16ab-f968-8b6e-61d6d57f9a47-2e623145" class="frist"><div class="party-content"><div class="div-block-32"><div class="text-block-20">Party Trays</div><div class="underline"></div></div><div class="party-description"><div class="party-text">Welcome to Sunshine, the renowned caterer in New York that caters to all your event requirements. We offer expertise in organizing birthday parties, corporate events, holiday parties, wedding celebrations, and other special events.</div><div class="party-text">We have a variety of party trays available in different sizes, suitable for any event celebration! Our mission is to provide our clients with a unique and stress-free event experience that will leave their guests happy and satisfied, be it a grand engagement party or a small corporate lunch.</div></div><div class="button-wrap middle"><a data-w-id="faafc182-7d5b-0bcd-8eb7-f52fccc27947" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div id="w-node-e9f10617-28cc-18d3-41d3-ac3e6584da95-2e623145" class="second"><div class="div-block-37"><img src="images/party-middle.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9953002929688px, 939.9906005859375px" srcset="images/party-middle-p-500.jpg 500w, images/party-middle-p-800.jpg 800w, images/party-middle-p-1080.jpg 1080w, images/party-middle.jpg 1200w" alt="" class="image-37"/></div></div><div class="_3rd"><div class="resarve-img"><img src="images/imgi_21_sunshine_4.png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/imgi_21_sunshine_4-p-500.png 500w, images/imgi_21_sunshine_4-p-800.png 800w, images/imgi_21_sunshine_4-p-1080.png 1080w, images/imgi_21_sunshine_4.png 1600w" alt="" class="image-40"/></div></div><div class="_4th"><div class="resarve-section-heading"><div class="resarve-title">Reserve A Table</div><div class="resarve-description">Reservations accepted for parties of 2 or more. Entire party must be present to be seated. Reservations will be held for no more than 15 minutes.  For more information call at- Hillside:</div></div><div class="form-block-wrapper"><div class="form-border w-form"><form id="post-form" name="wf-form-Contact-Form" data-name="Contact Form" method="post" class="form_100w" data-wf-page-id="68d17b55669acb852e623145" data-wf-element-id="bbd8bcd7-742e-00fe-0e0d-3589cd6f6cfe"><div class="form-row"><div class="input-wrapper mr-15"><label for="First-Name" class="input-label">First Name</label><input class="input w-input" maxlength="256" name="First-Name" data-name="First Name" placeholder="Jhon" type="text" id="First-Name" data-ms-member="full-name"/></div><div class="input-wrapper mr-15"><label for="Last-Name" class="input-label">Last Name</label><input class="input w-input" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Doe" type="text" id="Last-Name" data-ms-member="full-name"/></div></div><div class="form-row"><div class="input-wrapper mr-15"><label for="Company-name" class="input-label">Phone <span class="text-red">*</span> (Enter 10 digit Number)</label><input class="input w-input" maxlength="256" name="Company-name" data-name="Company name" placeholder="Phone" type="tel" id="Company-name" data-ms-member="phone" required=""/></div><div class="input-wrapper"><label for="Company-website" class="input-label">N0. of person</label><input class="input w-input" maxlength="256" name="Company-website" data-name="Company website" placeholder="Enter the number" type="number" id="Company-website" data-ms-member="portfolio"/></div></div><div class="form-row"><div class="input-wrapper"><label for="Company-name" class="input-label-2">Date<span class="text-red">*</span></label><input type="date" data-ms-member="" class="input-date"/></div><div class="input-wrapper"><label for="field-3" class="input-label">Select One</label><select id="field-3" name="field-3" data-name="Field 3" class="input w-select"><option value="">Select time</option><option value="12:00 PM">12:00 PM</option><option value="12:30 PM">12:30 PM</option><option value="01:00 PM">01:00 PM</option><option value="01:30 PM">01:30 PM</option><option value="02:00 PM">02:00 PM</option><option value="02:30 PM">02:30 PM</option><option value="03:00 PM">03:00 PM</option><option value="03:30 PM">03:30 PM</option><option value="04:00 PM">04:00 PM</option><option value="04:30 PM">04:30 PM</option><option value="05:00 PM">05:00 PM</option><option value="05:30 PM">05:30 PM</option><option value="06:00 PM">06:00 PM</option><option value="06:30 PM">06:30 PM</option><option value="07:00 PM">07:00 PM</option><option value="07:30 PM">07:30 PM</option><option value="08:00 PM">08:00 PM</option><option value="08:30 PM">08:30 PM</option><option value="09:00 PM">09:00 PM</option><option value="09:30 PM">09:30 PM</option><option value="10:00 PM">10:00 PM</option><option value="10:30 PM">10:30 PM</option><option value="11:30 PM">11:00 PM</option><option value="11:30 PM">11:30 PM</option><option value="12:00 AM">12:00 AM</option><option value="01:00 AM">01:00 AM</option></select></div></div><div class="form-separator"></div><div class="input-wrapper"><label for="Email-5" class="input-label">Email <span class="text-red">*</span></label><input class="input w-input" maxlength="256" name="Email" data-name="Email" placeholder="johndoe@email.com" type="email" id="Email-5" data-ms-member="email" required=""/></div><div class="rte-label">Special instruction<span class="text-red">*</span></div><textarea id="Cover-Letter" name="Cover-Letter" maxlength="5000" data-name="Cover Letter" placeholder="Example Text" class="input w-input"></textarea><div class="form-separator"></div><div class="spacer-10"></div><input type="submit" data-wait="Please wait..." class="button-7 in-form w-button" value="Submit"/></form><div class="message_success w-form-done"><div>You&#x27;ve successfully applied for this job!</div></div><div class="message-error w-form-fail"><div class="paragraph-3">Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div></section><section class="catering-section"><div class="w-layout-blockcontainer container_new w-container"><div class="section_wrapper"><div class="catering-heading-wrapper"><div class="catering-heading">Events &amp; Catering</div><div class="section-subhading">Welcome to Sunrise, the no. 1 caterer in New York for all your catering and event needs! Whether you’re organizing a private party, business event, holiday party, wedding celebration, or any other special occasion, we have you covered.</div></div><div class="button-wrap middle"><a data-w-id="cf3d353e-c661-60f4-1c06-60b450917dbe" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="catering-card-wrapper"><div class="logos-container2"><div class="logos-row2"><div class="card catering"><div class="card-image-wrapper"><img src="images/high-angle-young-women-party-1-1.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9906005859375px" srcset="images/high-angle-young-women-party-1-1-p-500.jpg 500w, images/high-angle-young-women-party-1-1-p-800.jpg 800w, images/high-angle-young-women-party-1-1.jpg 1000w" alt="" class="image-39"/></div><div data-w-id="e3953032-73ac-fe36-e122-67b29ce6ec7e" class="card-content"><div class="card-title-block"><div class="catering-card-title">Birthday Party</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">If you’re looking for a reliable and well-regarded private event catering service in Hicksville or Hillside, NY, to organize a birthday party, Sunshine is here at your service! </div><div class="button-wrap middle"><a data-w-id="e3953032-73ac-fe36-e122-67b29ce6ec86" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="images/imgi_11_catering-holiday.jpg" loading="lazy" sizes="(max-width: 1919px) 100vw, 1919.98583984375px" srcset="images/imgi_11_catering-holiday-p-500.jpg 500w, images/imgi_11_catering-holiday-p-800.jpg 800w, images/imgi_11_catering-holiday-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d167249a_imgi_11_catering-holiday-p-1600.jpg 1600w, images/imgi_11_catering-holiday.jpg 1920w" alt=""/></div><div data-w-id="2146c618-d521-89ec-78b5-1b9ae01bfc08" class="card-content"><div class="card-title-block"><div class="catering-card-title">Holiday Party</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Looking for the ultimate holiday party catering experience in NY? Look no further than one of the leading catering services in Hicksville and Hillside! </div><div class="button-wrap middle"><a data-w-id="2146c618-d521-89ec-78b5-1b9ae01bfc10" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9764404296875px" srcset="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen-p-500.jpg 500w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen-p-800.jpg 800w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen.jpg 1000w" alt="" class="image-38"/></div><div data-w-id="bf295065-5e86-e6fc-5c58-abe6a715482c" class="card-content"><div class="card-title-block"><div class="catering-card-title">Sweet Sixteen</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Welcome to Sunshine Catering! We specialize in providing exceptional sweet sixteen catering services in Hicksville and Hillside, NY. </div><div class="button-wrap middle"><a data-w-id="bf295065-5e86-e6fc-5c58-abe6a7154834" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="images/catering-wedding.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9764404296875px" srcset="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eeb95e61a030aab3fdac55_catering-wedding-p-500.jpg 500w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eeb95e61a030aab3fdac55_catering-wedding-p-800.jpg 800w, images/catering-wedding.jpg 1000w" alt=""/></div><div data-w-id="2a3cc5d7-df1b-49e1-8aae-9aad665f71f6" class="card-content"><div class="card-title-block"><div class="catering-card-title">Wedding Events</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Looking for the ultimate holiday party catering experience in NY? Look no further than one of the leading catering services in Hicksville and Hillside!</div><div class="button-wrap middle"><a data-w-id="2a3cc5d7-df1b-49e1-8aae-9aad665f71fe" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="images/high-angle-young-women-party-1-1.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9906005859375px" srcset="images/high-angle-young-women-party-1-1-p-500.jpg 500w, images/high-angle-young-women-party-1-1-p-800.jpg 800w, images/high-angle-young-women-party-1-1.jpg 1000w" alt=""/></div><div data-w-id="93a52d74-fbac-3204-8668-c10e010cefd2" class="card-content"><div class="card-title-block"><div class="catering-card-title">Kitty Party</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Our team comprises highly committed professionals who specialize in delivering exceptional catering services for your kitty parties in Hicksville and Hillside, NY.  </div><div class="button-wrap middle"><a data-w-id="93a52d74-fbac-3204-8668-c10e010cefda" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate.jpg" loading="lazy" sizes="(max-width: 1919px) 100vw, 1919.98583984375px" srcset="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-500.jpg 500w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-800.jpg 800w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-1600.jpg 1600w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate.jpg 1920w" alt=""/></div><div data-w-id="9656321f-e9ce-133e-6782-e02d85cba7a2" class="card-content"><div class="card-title-block"><div class="catering-card-title">Corporate Event</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">If you’re searching for a corporate caterer to assist with organizing a meeting, conference, product launch, or any other corporate gathering, Sunshine is here to help! </div><div class="button-wrap middle"><a data-w-id="9656321f-e9ce-133e-6782-e02d85cba7aa" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div></div><div class="logos-row2"><div class="card catering"><div class="card-image-wrapper"><img src="images/high-angle-young-women-party-1-1.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9906005859375px" srcset="images/high-angle-young-women-party-1-1-p-500.jpg 500w, images/high-angle-young-women-party-1-1-p-800.jpg 800w, images/high-angle-young-women-party-1-1.jpg 1000w" alt="" class="image-39"/></div><div data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a28f1" class="card-content"><div class="card-title-block"><div class="catering-card-title">Birthday Party</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">If you’re looking for a reliable and well-regarded private event catering service in Hicksville or Hillside, NY, to organize a birthday party, Sunshine is here at your service! </div><div class="button-wrap middle"><a data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a28f9" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="images/imgi_11_catering-holiday.jpg" loading="lazy" sizes="(max-width: 1919px) 100vw, 1919.98583984375px" srcset="images/imgi_11_catering-holiday-p-500.jpg 500w, images/imgi_11_catering-holiday-p-800.jpg 800w, images/imgi_11_catering-holiday-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d167249a_imgi_11_catering-holiday-p-1600.jpg 1600w, images/imgi_11_catering-holiday.jpg 1920w" alt=""/></div><div data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a2904" class="card-content"><div class="card-title-block"><div class="catering-card-title">Holiday Party</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Looking for the ultimate holiday party catering experience in NY? Look no further than one of the leading catering services in Hicksville and Hillside! </div><div class="button-wrap middle"><a data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a290c" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9764404296875px" srcset="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen-p-500.jpg 500w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen-p-800.jpg 800w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen.jpg 1000w" alt="" class="image-38"/></div><div data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a2917" class="card-content"><div class="card-title-block"><div class="catering-card-title">Sweet Sixteen</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Welcome to Sunshine Catering! We specialize in providing exceptional sweet sixteen catering services in Hicksville and Hillside, NY. </div><div class="button-wrap middle"><a data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a291f" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="images/catering-wedding.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9764404296875px" srcset="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eeb95e61a030aab3fdac55_catering-wedding-p-500.jpg 500w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eeb95e61a030aab3fdac55_catering-wedding-p-800.jpg 800w, images/catering-wedding.jpg 1000w" alt=""/></div><div data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a292a" class="card-content"><div class="card-title-block"><div class="catering-card-title">Wedding Events</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Looking for the ultimate holiday party catering experience in NY? Look no further than one of the leading catering services in Hicksville and Hillside!</div><div class="button-wrap middle"><a data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a2932" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="images/high-angle-young-women-party-1-1.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9906005859375px" srcset="images/high-angle-young-women-party-1-1-p-500.jpg 500w, images/high-angle-young-women-party-1-1-p-800.jpg 800w, images/high-angle-young-women-party-1-1.jpg 1000w" alt=""/></div><div data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a293d" class="card-content"><div class="card-title-block"><div class="catering-card-title">Kitty Party</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Our team comprises highly committed professionals who specialize in delivering exceptional catering services for your kitty parties in Hicksville and Hillside, NY.  </div><div class="button-wrap middle"><a data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a2945" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate.jpg" loading="lazy" sizes="(max-width: 1919px) 100vw, 1919.98583984375px" srcset="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-500.jpg 500w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-800.jpg 800w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-1600.jpg 1600w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate.jpg 1920w" alt=""/></div><div data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a2950" class="card-content"><div class="card-title-block"><div class="catering-card-title">Corporate Event</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">If you’re searching for a corporate caterer to assist with organizing a meeting, conference, product launch, or any other corporate gathering, Sunshine is here to help! </div><div class="button-wrap middle"><a data-w-id="2730d36c-0369-38c2-5d3d-cac4d96a2958" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div></div><div class="logos-row2"><div class="card catering"><div class="card-image-wrapper"><img src="images/high-angle-young-women-party-1-1.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9906005859375px" srcset="images/high-angle-young-women-party-1-1-p-500.jpg 500w, images/high-angle-young-women-party-1-1-p-800.jpg 800w, images/high-angle-young-women-party-1-1.jpg 1000w" alt="" class="image-39"/></div><div data-w-id="30299c0f-2cb4-9278-469f-ec47a377cb61" class="card-content"><div class="card-title-block"><div class="catering-card-title">Birthday Party</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">If you’re looking for a reliable and well-regarded private event catering service in Hicksville or Hillside, NY, to organize a birthday party, Sunshine is here at your service! </div><div class="button-wrap middle"><a data-w-id="30299c0f-2cb4-9278-469f-ec47a377cb69" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="images/imgi_11_catering-holiday.jpg" loading="lazy" sizes="(max-width: 1919px) 100vw, 1919.98583984375px" srcset="images/imgi_11_catering-holiday-p-500.jpg 500w, images/imgi_11_catering-holiday-p-800.jpg 800w, images/imgi_11_catering-holiday-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d167249a_imgi_11_catering-holiday-p-1600.jpg 1600w, images/imgi_11_catering-holiday.jpg 1920w" alt=""/></div><div data-w-id="30299c0f-2cb4-9278-469f-ec47a377cb74" class="card-content"><div class="card-title-block"><div class="catering-card-title">Holiday Party</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Looking for the ultimate holiday party catering experience in NY? Look no further than one of the leading catering services in Hicksville and Hillside! </div><div class="button-wrap middle"><a data-w-id="30299c0f-2cb4-9278-469f-ec47a377cb7c" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9764404296875px" srcset="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen-p-500.jpg 500w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen-p-800.jpg 800w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eecefa2eec46527bd9a263_catering-sweet-sixteen.jpg 1000w" alt="" class="image-38"/></div><div data-w-id="30299c0f-2cb4-9278-469f-ec47a377cb87" class="card-content"><div class="card-title-block"><div class="catering-card-title">Sweet Sixteen</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Welcome to Sunshine Catering! We specialize in providing exceptional sweet sixteen catering services in Hicksville and Hillside, NY. </div><div class="button-wrap middle"><a data-w-id="30299c0f-2cb4-9278-469f-ec47a377cb8f" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="images/catering-wedding.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9764404296875px" srcset="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eeb95e61a030aab3fdac55_catering-wedding-p-500.jpg 500w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eeb95e61a030aab3fdac55_catering-wedding-p-800.jpg 800w, images/catering-wedding.jpg 1000w" alt=""/></div><div data-w-id="30299c0f-2cb4-9278-469f-ec47a377cb9a" class="card-content"><div class="card-title-block"><div class="catering-card-title">Wedding Events</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Looking for the ultimate holiday party catering experience in NY? Look no further than one of the leading catering services in Hicksville and Hillside!</div><div class="button-wrap middle"><a data-w-id="30299c0f-2cb4-9278-469f-ec47a377cba2" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="images/high-angle-young-women-party-1-1.jpg" loading="lazy" sizes="(max-width: 1279px) 100vw, 999.9906005859375px" srcset="images/high-angle-young-women-party-1-1-p-500.jpg 500w, images/high-angle-young-women-party-1-1-p-800.jpg 800w, images/high-angle-young-women-party-1-1.jpg 1000w" alt=""/></div><div data-w-id="30299c0f-2cb4-9278-469f-ec47a377cbad" class="card-content"><div class="card-title-block"><div class="catering-card-title">Kitty Party</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">Our team comprises highly committed professionals who specialize in delivering exceptional catering services for your kitty parties in Hicksville and Hillside, NY.  </div><div class="button-wrap middle"><a data-w-id="30299c0f-2cb4-9278-469f-ec47a377cbb5" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div><div class="card catering"><div class="card-image-wrapper"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate.jpg" loading="lazy" sizes="(max-width: 1919px) 100vw, 1919.98583984375px" srcset="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-500.jpg 500w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-800.jpg 800w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate-p-1600.jpg 1600w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68ec82fd18be3f55d16724ac_imgi_9_catering-corporate.jpg 1920w" alt=""/></div><div data-w-id="30299c0f-2cb4-9278-469f-ec47a377cbc0" class="card-content"><div class="card-title-block"><div class="catering-card-title">Corporate Event</div></div><div style="height:0px;opacity:0" class="card-description-block"><div class="card-description">If you’re searching for a corporate caterer to assist with organizing a meeting, conference, product launch, or any other corporate gathering, Sunshine is here to help! </div><div class="button-wrap middle"><a data-w-id="30299c0f-2cb4-9278-469f-ec47a377cbc8" href="#" class="button-3 c-13 w-inline-block"><div class="btn-txt-container"><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Read More</div><div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);color:rgb(255,255,255)" class="btn-txt">Make a Resarvation</div></div><div style="height:0%" class="btn-bg c-13"></div></a></div></div></div><div class="card-bg-ovelay"></div></div></div><div class="w-embed"><style>
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos-row2 {
+    animation: scroll 20s linear infinite;
+  }
+  
+  .logos-container2:hover .logos-row2 {
+  	animation-play-state: paused;
+  }
+</style></div><div class="logos-gradient"></div><div class="logos-gradient is-inverted"></div></div></div></section><section class="section-27"><div class="w-layout-blockcontainer container w-container"><div class="section-wrappe"><div class="swiper-slider"><div class="div-block-39"><div class="next-wrapper-2"><div id="card-prev" class="swiper-button-prev"><svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="svg-3"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" fill="currentColor"></path></svg></div><div id="card-next" class="swiper-button-next"><svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="svg-3"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" fill="currentColor"></path></svg></div></div><div id="card" class="swiper"><div class="swiper-wrapper"><div class="swiper-slide-2 _2"><div class="slider-imag"><img loading="lazy" src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eee00e95fcaab47ddc08e7_Sobolt-Icon-2022-Washing-Machine-Outlines-1.avif" alt=""/></div><p class="slider-card-suamry">Was op 40 graden</p></div><div class="swiper-slide-2"><div class="slider-imag"><img loading="lazy" src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eee00e95fcaab47ddc08ec_Sobolt-Icon-2022-Time-Savings-Outlines-2.avif" alt=""/></div><p class="slider-card-suamry">Douche niet langer dan 5 minuten</p></div><div class="swiper-slide-2"><div class="slider-imag"><img loading="lazy" src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eee00e95fcaab47ddc08f1_Sobolt-Icon-2022-Water-Tap-Outlines-1.avif" alt=""/></div><p class="slider-card-suamry">Vul de waterkoker alleen tot waar nodig</p></div><div class="swiper-slide-2"><div class="slider-imag"><img loading="lazy" src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eee00e95fcaab47ddc08f6_Sobolt-Icon-2022-Temperature-Outlines-1.avif" alt=""/></div><p class="slider-card-suamry">Thermostaat 1 graad lager</p></div><div class="swiper-slide-2"><div class="slider-imag"><img loading="lazy" src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eee00e95fcaab47ddc08f6_Sobolt-Icon-2022-Temperature-Outlines-1.avif" alt=""/></div><p class="slider-card-suamry">Thermostaat 1 graad lager</p></div><div class="swiper-slide-2"><div class="slider-imag"><img loading="lazy" src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68eee00e95fcaab47ddc08f6_Sobolt-Icon-2022-Temperature-Outlines-1.avif" alt=""/></div><p class="slider-card-suamry">Thermostaat 1 graad lager</p></div></div></div><div class="w-embed w-script"><html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<style>
+.swiper-button-next svg, .swiper-button-prev svg {
+    color: #17320b !important;
+}
+.swiper-button-next, .swiper-button-prev {
+    color: #17320b !important;
+}
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #17320b !important;
+}
+</style>
+</head>
+<body>
+<script>
+let sw = document.getElementById("card");
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper("#card", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: "#cards",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: "#card-next",
+      prevEl: "#card-prev",
+    },
+    breakpoints: {
+      1024: { slidesPerView: 3, slidesPerGroup: 1 },
+      768: { slidesPerView: 2, slidesPerGroup: 1 },
+      480: { slidesPerView: 1 },
+    },
+    watchOverflow: true,
+    speed: 600,
+  });
+});
+console.log(sw)
+</script>
+</body>
+</html></div></div></div></div></div></section><section class="gallary-section"><div class="w-layout-blockcontainer container_new-2 w-container"><div class="section-wrapper"><div class="section-headline"><div class="text-block-26">Gallery</div></div><div class="container-2"><div class="w-embed"><style>
+  .w-editor-body .img-grid__img:hover {
+    transform: none !important;
+  }
+</style></div><div class="img-grid"><a href="#" id="w-node-_927e5b3e-fc80-1101-04ae-f7b04102c301-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/catering-20pic-207-p-500.webp 500w, images/catering-20pic-207-p-800.webp 800w, images/catering-20pic-207.webp 959w" alt="" src="images/catering-20pic-207.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0215.jpg",
+      "fileName": "DSCF0215.jpg",
+      "fileSize": 392844,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f43673384a4e1fc0198ed_DSCF0215.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_927e5b3e-fc80-1101-04ae-f7b04102c303-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/catering-20pic-2010-p-500.webp 500w, images/catering-20pic-2010-p-800.webp 800w, images/catering-20pic-2010-p-1080.webp 1080w, images/catering-20pic-2010.webp 1360w" alt="" src="images/catering-20pic-2010.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0283.jpg",
+      "fileName": "DSCF0283.jpg",
+      "fileSize": 286408,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f4369b3c7981b2cd0b3b0_DSCF0283.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_927e5b3e-fc80-1101-04ae-f7b04102c305-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 765px" srcset="images/catering-20pic-206-p-500.webp 500w, images/catering-20pic-206.webp 765w" alt="" src="images/catering-20pic-206.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0307.jpg",
+      "fileName": "DSCF0307.jpg",
+      "fileSize": 308526,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f43695470d2684816f2fc_DSCF0307.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_927e5b3e-fc80-1101-04ae-f7b04102c307-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 765px" srcset="images/food-20pic-2011-p-500.webp 500w, images/food-20pic-2011.webp 765w" alt="" src="images/food-20pic-2011.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0231.jpg",
+      "fileName": "DSCF0231.jpg",
+      "fileSize": 422056,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f436751b8b2099ea991a6_DSCF0231.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_927e5b3e-fc80-1101-04ae-f7b04102c309-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 765px" srcset="images/food-20pic-206-p-500.webp 500w, images/food-20pic-206.webp 765w" alt="" src="images/food-20pic-206.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0259.jpg",
+      "fileName": "DSCF0259.jpg",
+      "fileSize": 77193,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f436800c1664685e3ce95_DSCF0259.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_927e5b3e-fc80-1101-04ae-f7b04102c30b-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 765px" srcset="images/food-20pic-2019-p-500.webp 500w, images/food-20pic-2019.webp 765w" alt="" src="images/food-20pic-2019.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0197.jpg",
+      "fileName": "DSCF0197.jpg",
+      "fileSize": 148964,
+      "height": 1067,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f4366248561386e99188c_DSCF0197.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a><a href="#" id="w-node-_927e5b3e-fc80-1101-04ae-f7b04102c30d-2e623145" class="img-grid__lighbox-link gallery-item w-inline-block w-lightbox"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.9811401367188px, 939.9764404296875px" srcset="images/food-20pic-2016-p-500.webp 500w, images/food-20pic-2016-p-800.webp 800w, images/food-20pic-2016-p-1080.webp 1080w, images/food-20pic-2016.webp 1354w" alt="" src="images/food-20pic-2016.webp" loading="lazy" class="img-grid__img"/><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "DSCF0295.jpg",
+      "fileName": "DSCF0295.jpg",
+      "fileSize": 258437,
+      "height": 1138,
+      "url": "https://cdn.prod.website-files.com/61783be66a3a3e2008fe409a/623f436998493d2d97752371_DSCF0295.jpg",
+      "width": 1600,
+      "type": "image"
+    }
+  ],
+  "group": "homeGrid"
+}</script></a></div><div class="button-wrap"><a href="#" class="show-more-btn w-inline-block"><div>Show more</div></a></div></div></div></div></section><section class="footer-dark"><div class="container-4"><div class="footer-wrapper"><div class="div-block-22"><a href="#" class="footer-brand w-inline-block"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68df5612335735d3f683edba_SUNRISE_LOGO-removebg-preview-removebg-preview.png" loading="lazy" sizes="(max-width: 767px) 100vw, 563.9716796875px" srcset="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68df5612335735d3f683edba_SUNRISE_LOGO-removebg-preview-removebg-preview-p-500.png 500w, https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68df5612335735d3f683edba_SUNRISE_LOGO-removebg-preview-removebg-preview.png 564w" alt="" class="image-9"/></a><div class="text-block-10">Serving authentic Indian cuisine for over 35 years. Experience the perfect blend of traditional recipes and modern culinary excellence.</div><div class="footer-social-block"><a href="https://www.facebook.com/people/Sunrise-Karahi-House/61578349237954/#" target="_blank" class="footer-social-link w-inline-block"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68e0b44cb4eb19c56d32d089_ri--facebook-fill.svg" loading="lazy" width="24" alt=""/></a><a href="https://www.tiktok.com/@sunrisekarahihouse" target="_blank" class="footer-social-link w-inline-block"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68e6229f2d03791a083de6ce_ri--tiktok-line.svg" loading="lazy" alt=""/></a><a href="https://www.instagram.com/sunriserestaurantny/" target="_blank" class="footer-social-link w-inline-block"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68e0b448209e07c6594fa949_mdi--instagram.svg" loading="lazy" alt=""/></a></div></div><div id="w-node-c4c67467-a4cd-64dc-7a50-4b5fdfa1be6b-dfa1be5c" class="footer-content"><div id="w-node-c4c67467-a4cd-64dc-7a50-4b5fdfa1be6c-dfa1be5c" class="footer-block"><div class="title-small">quick links</div><a href="/about" class="footer-link">About us</a><a href="#menu1" class="footer-link">Our Menu</a><a href="#events" class="footer-link">Events &amp; Catering</a><a href="/contact-us" class="footer-link">Contact</a></div><div id="w-node-c4c67467-a4cd-64dc-7a50-4b5fdfa1be77-dfa1be5c" class="footer-block"><div class="title-small">Contact</div><div class="div-block-21"><div class="phone-number-wrap"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68e0b1b93d8034229feedfcd_mdi-light--phone.svg" loading="lazy" alt="" class="image-10"/><div>718-779-6700</div></div><div class="phone-number-wrap"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68e0b1b93d8034229feedfcd_mdi-light--phone.svg" loading="lazy" alt="" class="image-10"/><div>718-779-6707</div></div><div class="phone-number-wrap"><img src="https://cdn.prod.website-files.com/68d17b52669acb852e6230b0/68e0b72cd761fb3533f5c940_ic--outline-email.svg" loading="lazy" alt="" class="image-10"/><div class="email">sunriserestaurantny@gmail.com</div></div></div></div></div></div></div><div class="footer-divider"></div><div class="footer-copyright-center">Copyright © 2025 Sunrise restaurant</div></section></div><script src="js/jquery.js?site=68d17b52669acb852e6230b0" type="text/javascript"  ></script><script src="js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript"  ></script><script src="js/webflow.schunk.26f314b908ad0eaa.js" type="text/javascript"  ></script><script src="js/webflow.schunk.a4242f5aa7b61deb.js" type="text/javascript"  ></script><script src="js/webflow.schunk.61b534daaaeddbc7.js" type="text/javascript"  ></script><script src="js/webflow-script.js" type="text/javascript"  ></script></body></html>
